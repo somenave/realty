@@ -1,0 +1,46 @@
+.burger-menu {
+  margin: 0 auto;
+  width: 70px;
+  display: block;
+  transition: all 0.3s;
+  cursor: pointer;
+  height: 22px;
+}
+.burger-menu .bar {
+  transition: all 0.3s;
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: white;
+}
+.burger-menu .bar:nth-of-type(2) {
+  margin: 8px 0 0;
+}
+.burger-menu--closed {
+  transition-delay: 0.3s;
+}
+.burger-menu--closed .bar {
+  float: right;
+}
+.burger-menu--closed .bar:nth-of-type(2) {
+  width: 75%;
+  transition-property: margin, height, width;
+  transition-delay: 0.3s, 0.3s, 0s;
+}
+.burger-menu--closed:hover .bar:nth-of-type(2) {
+  width: 100%;
+}
+.burger-menu--opened {
+  padding-top: 12px;
+}
+.burger-menu--opened .bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  transition-delay: 0.3s;
+  height: 2px;
+}
+.burger-menu--opened .bar:nth-of-type(2) {
+  transform: rotate(-45deg);
+  transition-delay: 0.3s;
+  height: 2px;
+}
+/*# sourceMappingURL=burger.css.map */
