@@ -118,9 +118,10 @@ document.addEventListener('keydown', function (e) {
 });
 "use strict";
 
-var offerSlider = document.querySelector('.swiper-container');
+var offerSlider = document.querySelector('.offer__slider');
+var gallerySlider = document.querySelector('.gallery__slider');
 var menu = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
-var swiper = new Swiper(offerSlider, {
+var swiper1 = new Swiper(offerSlider, {
   observer: true,
   observerParents: true,
   observerSlideChildren: true,
@@ -195,6 +196,45 @@ var swiper = new Swiper(offerSlider, {
         columns: 1
       }
     }
+  }
+});
+var swiper2 = new Swiper(gallerySlider, {
+  observer: true,
+  observerParents: true,
+  observerSlideChildren: true,
+  grabCursor: true,
+  centeredSlides: true,
+  freeMode: true,
+  slidesPerView: 'auto',
+  effect: 'coverflow',
+  loop: true,
+  coverflowEffect: {
+    rotate: 20,
+    stretch: 0,
+    depth: 50,
+    modifier: 1,
+    slideShadows: true
+  },
+  breakpoints: {
+    1780: {
+      spaceBetween: 240
+    },
+    1440: {
+      spaceBetween: 100
+    },
+    780: {
+      spaceBetween: 100
+    },
+    580: {
+      spaceBetween: 50
+    },
+    320: {
+      spaceBetween: 20
+    }
+  },
+  navigation: {
+    nextEl: '.gallery__arrow-next',
+    prevEl: '.gallery__arrow-prev'
   }
 });
 "use strict";
