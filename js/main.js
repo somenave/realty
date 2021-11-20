@@ -6,6 +6,7 @@ document.querySelector('.burger-menu').addEventListener('click', function (e) {
   document.querySelector('.burger-menu').classList.toggle('burger-menu--closed');
 });
 "use strict";
+"use strict";
 
 //Popups
 var popup_link = document.querySelectorAll('._popup-link');
@@ -116,6 +117,58 @@ document.addEventListener('keydown', function (e) {
     popup_close();
   }
 });
+"use strict";
+
+var questions = document.querySelectorAll('[data-num]');
+var numberQuestions = 4;
+var currentQuestionNumber = 1;
+
+function showQuestion(n) {
+  if (n > questions.length) {
+    currentQuestionNumber = 1;
+  }
+
+  if (n < 1) {
+    currentQuestionNumber = questions.length;
+  }
+
+  questions.forEach(function (item) {
+    item.style.display = "none";
+  });
+  questions[currentQuestionNumber - 1].style.display = 'block';
+}
+
+showQuestion(currentQuestionNumber);
+
+function plusQuestion(n) {
+  showQuestion(currentQuestionNumber += n);
+}
+
+function minusQuestion(n) {
+  showQuestion(currentQuestionNumber -= n);
+}
+
+try {
+  var nextBtn = document.querySelectorAll('.question-next');
+  nextBtn.forEach(function (btn) {
+    return btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      plusQuestion(1);
+      showQuestion(currentQuestionNumber);
+    });
+  });
+} catch (e) {}
+
+try {
+  var prevBtn = document.querySelectorAll('.question-back');
+  prevBtn.forEach(function (btn) {
+    return btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      minusQuestion(1);
+      showQuestion(currentQuestionNumber);
+    });
+  });
+} catch (e) {}
 "use strict";
 
 var offerSlider = document.querySelector('.offer__slider');

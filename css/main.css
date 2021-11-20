@@ -1413,6 +1413,102 @@ button.swiper-pagination-bullet {
   }
 }
 
+.question-form__content {
+  background: #FFFFFF;
+  border-radius: 25px;
+  padding: 80px;
+}
+
+.question__title {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 64px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+.question__descr {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
+}
+.question__subdescr {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+.question__content {
+  margin-bottom: 30px;
+}
+.question__buttons {
+  display: flex;
+  align-items: center;
+}
+.question-button {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  border: 1px solid #0B1D33;
+  border-radius: 50px;
+  display: block;
+  padding: 25px 55px;
+  cursor: pointer;
+}
+.question-back {
+  color: #000000;
+  background: #FFFFFF;
+  margin-right: 50px;
+}
+.question-next {
+  background: #0B1D33;
+  color: #FFFFFF;
+}
+
+.answers_first {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.answers_second {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+}
+.answers__item {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.answers__item:checked + label::before {
+  background: black;
+}
+.answers__label {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 30px;
+  display: block;
+}
+.answers__label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background: #D3D3D3;
+  border: 1px solid #ABABAB;
+  margin-right: 12px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
 .offer {
   padding: 150px 0 0;
 }
@@ -2655,10 +2751,17 @@ button.swiper-pagination-bullet {
 .popup__body {
   transform: scale(0);
   transition: all 0.3s ease 0s;
-  padding: 20px;
   width: 100%;
-  max-width: 560px;
   max-height: 100vh;
+}
+
+.order-popup__body {
+  padding: 20px;
+  max-width: 560px;
+}
+
+.question-popup__body {
+  max-width: 1000px;
 }
 
 .popup__close {
@@ -2685,7 +2788,6 @@ button.swiper-pagination-bullet {
 }
 
 .popup__form {
-  max-width: 550px;
   margin: 0 auto;
   color: #fff;
 }
