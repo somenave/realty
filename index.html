@@ -354,8 +354,8 @@
             <p>Мы&nbsp;осуществляем помощь в&nbsp;получении рассрочки и&nbsp;кредита.</p>
         </div>
         <div class="credit__buttons">
-            <a href="" class="credit__button btn">Расчитать ежемесячный платеж</a>
-            <a href="" class="credit__button btn">Подобрать условия в WhatsApp</a>
+            <a href="" class="credit__button credit__button_payment btn">Расчитать ежемесячный платеж</a>
+            <a href="" class="credit__button credit__button_circs btn">Подобрать условия в WhatsApp</a>
         </div>
     </div>
 </section>
@@ -537,8 +537,8 @@
 <div id="question" class="popup popup_question">
   <div class="popup__content">
     <div class="popup__body question-popup__body">
-      <div class="popup__close"></div>
-      <div class="popup__form">
+      <div class="popup__close question__close"></div>
+      <div class="popup__form popup__form-question">
         <form action="/">
           <div class="question-form__content">
             <div class="question" data-num="1">
@@ -548,74 +548,74 @@
                 <div class="answers answers_first">
                   <div class="answers__row">
                     <div class="question__subdescr">Жилая</div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi0" value="0" class="answers__item">
                       <label class="answers__label" for="qi0">Студия</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi1" value="1" class="answers__item">
                       <label class="answers__label" for="qi1">Апартаменты (квартира) 1–2 </label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi2" value="2" class="answers__item">
                       <label class="answers__label" for="qi2">Апартаменты (квартира) 3–4 спальни</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi3" value="3" class="answers__item">
                       <label class="answers__label" for="qi3">Таунхаус</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi4" value="4" class="answers__item">
                       <label class="answers__label" for="qi4">Пентхаус</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi5" value="5" class="answers__item">
                       <label class="answers__label" for="qi5">Вилла, дом</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi6" value="6" class="answers__item">
                       <label class="answers__label" for="qi6">Замок, поместье</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi7" value="7" class="answers__item">
                       <label class="answers__label" for="qi7">Земельный участок</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi8" value="8" class="answers__item">
                       <label class="answers__label" for="qi8">Инвестиционные проекты</label>
                     </div>
                   </div>
                   <div class="answers__row">
                     <div class="question__subdescr">Коммерческая</div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi9" value="9" class="answers__item">
                       <label class="answers__label" for="qi9">Доходные дома</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi10" value="10" class="answers__item">
                       <label class="answers__label" for="qi10">Отели, гостиницы</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi11" value="11" class="answers__item">
                       <label class="answers__label" for="qi11">Магазины, торговые центры</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi12" value="12" class="answers__item">
                       <label class="answers__label" for="qi12">Офисы, бизнес-центры</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi13" value="13" class="answers__item">
                       <label class="answers__label" for="qi13">Производственные помещения</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi14" value="14" class="answers__item">
                       <label class="answers__label" for="qi14">Склады</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi15" value="15" class="answers__item">
                       <label class="answers__label" for="qi15">Парковки</label>
                     </div>
-                    <div class="">
+                    <div class="answers-item">
                       <input type="radio" name="realtyType" id="qi16" value="16" class="answers__item">
                       <label class="answers__label" for="qi16">Рестораны, кафе, бары</label>
                     </div>
@@ -623,120 +623,121 @@
                 </div>
               </div>
             </div>
+
             <div class="question" data-num="2">
               <h3 class="question__title">Вопрос 2</h3>
               <div class="question__descr">В какой стране Вы бы хотели приобрести недвижимость?</div>
               <div class="question__content">
                 <div class="answers answers_second">
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-0" value="0" class="answers__item">
                     <label class="answers__label" for="qi1-0">Австрия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-1" value="1-1" class="answers__item">
                     <label class="answers__label" for="qi1-1">Андорра</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-2" value="1-2" class="answers__item">
                     <label class="answers__label" for="qi1-2">Болгария</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-3" value="1-3" class="answers__item">
                     <label class="answers__label" for="qi1-3">Великобритания</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-4" value="1-4" class="answers__item">
                     <label class="answers__label" for="qi1-4">Германия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-5" value="1-5" class="answers__item">
                     <label class="answers__label" for="qi1-5">Греция</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-6" value="1-6" class="answers__item">
                     <label class="answers__label" for="qi1-6">Грузия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-7" value="1-7" class="answers__item">
                     <label class="answers__label" for="qi1-7">Израиль</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-8" value="1-8" class="answers__item">
                     <label class="answers__label" for="qi1-8">Испания</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-9" value="1-9" class="answers__item">
                     <label class="answers__label" for="qi1-9">Италия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-0" value="0" class="answers__item">
                     <label class="answers__label" for="qi1-0">Кипр</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-10" value="1-10" class="answers__item">
                     <label class="answers__label" for="qi1-10">Латвия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-11" value="1-11" class="answers__item">
                     <label class="answers__label" for="qi1-11">ОАЭ</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-12" value="1-12" class="answers__item">
                     <label class="answers__label" for="qi1-12">Польша</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-13" value="1-13" class="answers__item">
                     <label class="answers__label" for="qi1-13">Португалия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-14" value="1-14" class="answers__item">
                     <label class="answers__label" for="qi1-14">Словения</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-15" value="1-15" class="answers__item">
                     <label class="answers__label" for="qi1-15">Страны Карибского бассейна</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-16" value="1-16" class="answers__item">
                     <label class="answers__label" for="qi1-16">США</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-17" value="1-17" class="answers__item">
                     <label class="answers__label" for="qi1-17">Таиланд</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-18" value="1-18" class="answers__item">
                     <label class="answers__label" for="qi1-18">Турция</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-20" value="1-20" class="answers__item">
                     <label class="answers__label" for="qi1-20">Франция</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-21" value="1-21" class="answers__item">
                     <label class="answers__label" for="qi1-21">Хорватия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-22" value="1-22" class="answers__item">
                     <label class="answers__label" for="qi1-22">Черногория</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-23" value="1-23" class="answers__item">
                     <label class="answers__label" for="qi1-23">Чехия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-24" value="1-24" class="answers__item">
                     <label class="answers__label" for="qi1-24">Швейцария</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-25" value="1-25" class="answers__item">
                     <label class="answers__label" for="qi1-25">Ирландия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-26" value="1-26" class="answers__item">
                     <label class="answers__label" for="qi1-26">Россия</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="country" id="qi1-27" value="1-27" class="answers__item">
                     <label class="answers__label" for="qi1-27">Украина</label>
                   </div>
@@ -749,33 +750,186 @@
               <div class="question__descr">Какую сумму Вы планируете инвестировать в недвижимость?</div>
               <div class="question__content">
                 <div class="answers answers_third">
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="investSum" id="qi2-0" value="2-0" class="answers__item">
                     <label class="answers__label" for="qi2-0">до 100 тыс. €</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="investSum" id="qi2-1" value="2-1" class="answers__item">
                     <label class="answers__label" for="qi2-1">100 тыс. - 300 тыс. €</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="investSum" id="qi2-2" value="2-2" class="answers__item">
                     <label class="answers__label" for="qi2-2">300 тыс. - 500 тыс. €</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="investSum" id="qi2-3" value="2-3" class="answers__item">
                     <label class="answers__label" for="qi2-3">500 тыс. - 1 млн €</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="investSum" id="qi2-4" value="2-4" class="answers__item">
                     <label class="answers__label" for="qi2-4">1–2 млн €</label>
                   </div>
-                  <div class="">
+                  <div class="answers-item">
                     <input type="radio" name="investSum" id="qi2-5" value="2-5" class="answers__item">
                     <label class="answers__label" for="qi2-5">2 и более млн €</label>
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="question" data-num="4">
+              <h3 class="question__title">Вопрос 4</h3>
+              <div class="question__descr">Какие услуги участников онлайн-выставки вас могут заинтересовать?</div>
+              <div class="question__content">
+                <div class="answers answers_fourth">
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-0" value="3-0" class="answers__item">
+                    <label class="answers__label" for="qi3-0">Подбор недвижимости в новостройках</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-1" value="3-1" class="answers__item">
+                    <label class="answers__label" for="qi3-1">Подбор объектов на вторичном рынке</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-2" value="3-2" class="answers__item">
+                    <label class="answers__label" for="qi3-2">Подбор коммерческих объектов</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-3" value="3-3" class="answers__item">
+                    <label class="answers__label" for="qi3-3">Управление недвижимостью</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-4" value="3-4" class="answers__item">
+                    <label class="answers__label" for="qi3-4">Помощь в организации бизнеса за рубежом</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-5" value="3-5" class="answers__item">
+                    <label class="answers__label" for="qi3-5">Получение ВНЖ</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-6" value="3-6" class="answers__item">
+                    <label class="answers__label" for="qi3-6">Получение гражданства</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-7" value="3-7" class="answers__item">
+                    <label class="answers__label" for="qi3-7">Юридические услуги</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-8" value="3-8" class="answers__item">
+                    <label class="answers__label" for="qi3-8">Лечение за рубежом</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="services" id="qi3-9" value="3-9" class="answers__item">
+                    <label class="answers__label" for="qi3-9">Обучение за рубежом</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" data-num="5">
+              <h3 class="question__title">Вопрос 5</h3>
+              <div class="question__descr">В течение какого времени Вы планируете приобрести недвижимость?</div>
+              <div class="question__content">
+                <div class="answers answers_fifth">
+                  <div class="answers-item">
+                    <input type="radio" name="duration" id="qi4-0" value="4-0" class="answers__item">
+                    <label class="answers__label" for="qi4-0">Как только откроют границы</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="duration" id="qi4-1" value="4-1" class="answers__item">
+                    <label class="answers__label" for="qi4-1">3 месяца</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="duration" id="qi4-2" value="4-2" class="answers__item">
+                    <label class="answers__label" for="qi4-2">6 месяцев</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="duration" id="qi4-3" value="4-3" class="answers__item">
+                    <label class="answers__label" for="qi4-3">12 месяцев</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="duration" id="qi4-4" value="4-4" class="answers__item">
+                    <label class="answers__label" for="qi4-4">Сроки пока не определены</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" data-num="6">
+              <h3 class="question__title">Вопрос 6</h3>
+              <div class="question__descr">Для каких целей Вы планируете приобрести недвижимость?</div>
+              <div class="question__content">
+                <div class="answers answers_sixth">
+                  <div class="answers-item">
+                    <input type="radio" name="goal" id="qi5-0" value="5-0" class="answers__item">
+                    <label class="answers__label" for="qi5-0">Для выгодных инвестиций и сдачи в аренду</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="goal" id="qi5-1" value="5-1" class="answers__item">
+                    <label class="answers__label" for="qi5-1">Для получения ВНЖ или гражданства</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="goal" id="qi5-2" value="5-2" class="answers__item">
+                    <label class="answers__label" for="qi5-2">Для сезонного отдыха</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="goal" id="qi5-3" value="5-3" class="answers__item">
+                    <label class="answers__label" for="qi5-3">В целях открытия бизнеса или филиала</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" data-num="7">
+              <h3 class="question__title">Вопрос 7</h3>
+              <div class="question__descr">Планируете ли Вы переезд?</div>
+              <div class="question__content">
+                <div class="answers answers_seventh">
+                  <div class="answers-item">
+                    <input type="radio" name="moving" id="qi6-0" value="6-0" class="answers__item">
+                    <label class="answers__label" for="qi6-0">Да</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="moving" id="qi6-1" value="6-1" class="answers__item">
+                    <label class="answers__label" for="qi6-1">Да, переезд с детьми</label>
+                  </div>
+                  <div class="answers-item">
+                    <input type="radio" name="moving" id="qi6-2" value="6-2" class="answers__item">
+                    <label class="answers__label" for="qi6-2">Нет</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="question" data-num="8">
+              <h3 class="question__title">Мы нашли
+                <span class="question__title-accent"><span class="random-num">18</span> объектов</span> по вашему запросу</h3>
+              <div class="question__descr">Оставьте свои контактные данные и мы отправим вам предложения
+                <span>в течение 1 минуты</span></div>
+              <div class="question__content">
+                <div class="answers answers_eighth">
+                  <div class="answer__name answer__input">
+                    <input type="text" required placeholder="Ваше имя">
+                  </div>
+                  <div class="answer__phone answer__input">
+                    <input type="tel" required placeholder="Телефон" pattern="[0-9]{11}" maxlength="11">
+                  </div>
+                  <div class="answer__email answer__input">
+                    <input type="email" required placeholder="E-mail">
+                  </div>
+                </div>
+
+                <button type="submit" class="question-order question-button">ПОЛУЧИТЬ КАТАЛОГ</button>
+              </div>
+              <div class="">
+                <input id="questionPolicy" class="question__policy-input" type="checkbox" checked name="agreement">
+                <label for="questionPolicy" class="question__policy">
+                  Я согласен с <a href="#">пользовательским соглашением</a> и <a href="#">политикой конфиденциальности
+                    сайта</a></label>
+              </div>
+            </div>
+
             <div class="question__buttons">
               <button class="question-back question-button">Назад</button>
               <button class="question-next question-button">Далее</button>

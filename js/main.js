@@ -120,10 +120,14 @@ document.addEventListener('keydown', function (e) {
 "use strict";
 
 var questions = document.querySelectorAll('[data-num]');
-var numberQuestions = 4;
+var numberQuestions = 7;
 var currentQuestionNumber = 1;
 
 function showQuestion(n) {
+  if (questions[currentQuestionNumber - 1].getAttribute('data-num') == 8) {
+    document.querySelector('.question__buttons').style.display = 'none';
+  }
+
   if (n > questions.length) {
     currentQuestionNumber = 1;
   }
@@ -169,6 +173,13 @@ try {
     });
   });
 } catch (e) {}
+"use strict";
+
+function getRandomInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.querySelector('.random-num').textContent = "".concat(getRandomInRange(16, 60));
 "use strict";
 
 var offerSlider = document.querySelector('.offer__slider');
