@@ -478,6 +478,20 @@ h5 {
   }
 }
 
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 4px rgba(255, 210, 210, 0.5);
+}
+@media (max-width: 768px) {
+  .logo {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
 /**
  * Swiper 7.3.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1595,24 +1609,29 @@ textarea.popup__form-input {
     flex-wrap: wrap;
   }
 }
-.header__logo {
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 24px;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 4px rgba(255, 210, 210, 0.5);
-  padding-right: 15px;
-}
-@media (max-width: 768px) {
-  .header__logo {
-    font-size: 14px;
-    line-height: 16px;
-  }
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 @media (max-width: 660px) {
-  .header__logo {
+  .header__left {
     margin-bottom: 15px;
     padding-right: 10px;
+  }
+}
+.header__left .logotype {
+  width: 80px;
+  height: auto;
+}
+.header__left .logotype img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .header__left .logotype {
+    width: 50px;
   }
 }
 .header__right {
@@ -1795,7 +1814,7 @@ textarea.popup__form-input {
 }
 @media (max-width: 768px) {
   .hero {
-    padding: 150px 0 50px;
+    padding: 180px 0 50px;
   }
 }
 .hero::after {
@@ -2769,8 +2788,8 @@ textarea.popup__form-input {
   display: block;
   color: #FFFFFF;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -2856,6 +2875,14 @@ textarea.popup__form-input {
 }
 .offer .swiper-pagination-bullet:not(:last-child) {
   margin-right: 20px;
+}
+@media (max-width: 660px) {
+  .offer .swiper-pagination-bullet {
+    width: 8px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .offer .swiper-pagination-bullet-active {
   color: #fff;
@@ -3724,11 +3751,11 @@ textarea.popup__form-input {
 }
 
 .location__top {
-  padding: 80px 0 30px;
+  padding: 20px 0 30px;
 }
 @media (max-width: 768px) {
   .location__top {
-    padding: 50px 0 20px;
+    padding: 10px 0 20px;
   }
 }
 .location__title {
@@ -3842,6 +3869,11 @@ textarea.popup__form-input {
     gap: 30px;
   }
 }
+@media (max-width: 660px) {
+  .footer__container {
+    flex-direction: column;
+  }
+}
 .footer__item {
   margin: 0 auto;
 }
@@ -3853,10 +3885,15 @@ textarea.popup__form-input {
   -o-object-fit: cover;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .footer__logo {
+    width: 80px;
+  }
+}
 .footer__policy {
   font-weight: bold;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   color: rgba(255, 255, 255, 0.5);
 }
 @media (max-width: 1220px) {
