@@ -1154,6 +1154,11 @@ button.swiper-pagination-bullet {
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
 }
+@media (max-width: 768px) {
+  .popup {
+    padding: 40px 0px;
+  }
+}
 
 .popup::before {
   content: "";
@@ -1824,7 +1829,7 @@ textarea.popup__form-input {
 @media (max-width: 660px) {
   .icon-menu {
     position: absolute;
-    top: 50%;
+    top: 0;
     right: 0;
   }
 }
@@ -2326,16 +2331,16 @@ textarea.popup__form-input {
   .question__close {
     width: 18px;
     height: 18px;
-    right: -15px;
-    right: -15px;
+    top: -20px;
+    right: -10px;
   }
 }
 .question__title {
   font-weight: bold;
-  font-size: 36px;
+  font-size: 34px;
   line-height: 40px;
   color: #000000;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .question__title-accent {
   color: #FF9E0C;
@@ -2360,9 +2365,9 @@ textarea.popup__form-input {
 }
 @media (max-width: 660px) {
   .question__title {
-    font-size: 22px;
-    line-height: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 10px;
   }
 }
 .question__descr {
@@ -2385,7 +2390,7 @@ textarea.popup__form-input {
 }
 @media (max-width: 660px) {
   .question__descr {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px;
     margin-bottom: 15px;
   }
@@ -2404,8 +2409,18 @@ textarea.popup__form-input {
     line-height: 22px;
   }
 }
+@media (max-width: 660px) {
+  .question__subdescr {
+    margin-bottom: 10px;
+  }
+}
 .question__content {
   margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .question__content {
+    margin-bottom: 15px;
+  }
 }
 .question__buttons {
   display: flex;
@@ -2626,7 +2641,7 @@ textarea.popup__form-input {
 }
 @media (max-width: 600px) {
   .answers_first {
-    gap: 15px;
+    gap: 10px;
     flex-direction: column;
   }
 }
@@ -2642,7 +2657,14 @@ textarea.popup__form-input {
 }
 @media (max-width: 500px) {
   .answers_second {
-    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .answers_second .answers__label {
+    padding-left: 22px;
+  }
+  .answers_second .answers__label::before {
+    width: 16px;
+    height: 14px;
   }
 }
 .answers__label {
