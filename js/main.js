@@ -32,6 +32,56 @@ function menuClose() {
 "use strict";
 "use strict";
 
+var mask = function mask(selector) {
+  var setCursorPosititon = function setCursorPosititon(pos, elem) {
+    elem.focus();
+
+    if (elem.setSelectionRange) {
+      elem.setSelectionRange(pos, pos);
+    } else if (elem.createTextRange) {
+      var range = elem.createTextRange();
+      range.collapse(true);
+      range.moveEnd('character', pos);
+      range.moveStart('character', pos);
+      range.select();
+    }
+  };
+
+  function createMask(event) {
+    var matrix = '+7 (___) ___ __ __',
+        i = 0,
+        def = matrix.replace(/\D/g, ''),
+        val = this.value.replace(/\D/g, ''),
+        checkMask = this.value.charAt(1);
+
+    if (def.length >= val.length || this.value.charAt(1) !== checkMask) {
+      val = def;
+    }
+
+    this.value = matrix.replace(/./g, function (a) {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    });
+
+    if (event.type === "blur") {
+      if (this.val.length == 2) {
+        this.val = "";
+      }
+    } else {
+      setCursorPosititon(this.value.length, this);
+    }
+  }
+
+  var inputs = document.querySelectorAll(selector);
+  inputs.forEach(function (input) {
+    input.addEventListener('input', createMask);
+    input.addEventListener('focus', createMask);
+    input.addEventListener('blur', createMask);
+  });
+};
+
+mask('[name="tel"]');
+"use strict";
+
 //Popups
 var popup_link = document.querySelectorAll('._popup-link');
 var popups = document.querySelectorAll('.popup');
