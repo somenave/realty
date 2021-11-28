@@ -1829,7 +1829,7 @@ textarea.popup__form-input {
 @media (max-width: 660px) {
   .icon-menu {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
   }
 }
