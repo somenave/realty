@@ -20,6 +20,14 @@ if (iconMenu != null) {
     iconMenu.classList.toggle("_active");
     menuBody.classList.toggle("_active");
     document.querySelector('body').classList.toggle('_lock');
+
+    if (iconMenu.classList.contains('_active')) {
+      var scroll = calcScroll();
+      btnPressed = true;
+      document.body.style.marginRight = "".concat(scroll, "px");
+    } else {
+      document.body.style.marginRight = '0px';
+    }
   });
 }
 
@@ -420,41 +428,29 @@ function body_lock_add(delay) {
     }, delay);
   }
 }
-// let inputs = document.querySelectorAll('input');
-// const clearInputs = () => {
-//   inputs.forEach(item => {
-//     item.value = '';
-//   });
-// };
-// const postData = async (url, data) => {
-//   let res = await fetch(url, {
-//     method: "POST",
-//     body: data
-//   });
-//   return await res.text();
-// };
-// document.querySelectorAll('.form-submit').forEach(item => {
-//   item.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     item.closest('.popup').classList.remove('_active');
-//     const formData = new FormData(item);
-//     // document.querySelector('.form-access').classList.add('_active');
-//     const api = 'https://formphp.ru/getcatalog.php';
-//     postData(api, formData)
-//       .then(res => {
-//         console.log(res);
-//         document.querySelector('.form-access').classList.add('_active');
-//       })
-//       .catch(() => {
-//         document.querySelector('.form-access').classList.add('_active');
-//         document.querySelector('.popup__access_title').textContent = 'Ошибка!';
-//         document.querySelector('.popup__access_descr').textContent = 'Что-то пошло не так...';
-//       })
-//       .finally(() => {
-//         clearInputs();
-//       });
-//       document.querySelector('.form-access').classList.add('_active');
-//   });
-// });
 "use strict";
+
+var btnPressed = false;
+
+function calcScroll() {
+  var div = document.createElement('div');
+  div.style.width = '50px';
+  div.style.height = '50px';
+  div.style.overflowY = 'scroll';
+  div.style.visibility = 'hidden';
+  document.body.appendChild(div);
+  var scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
+  return scrollWidth;
+}
+
+function openByScroll(selector) {
+  window.addEventListener('scroll', function () {
+    var scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+
+    if (!btnPressed && window.pageYOffset + document.documentElement.clientHeight >= scrollHeight) {
+      document.querySelector(selector).click();
+    }
+  });
+}
 //# sourceMappingURL=main.js.map
