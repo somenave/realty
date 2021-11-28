@@ -485,6 +485,7 @@ document.querySelectorAll('.form-submit').forEach(function (item) {
     })["finally"](function () {
       clearInputs();
     });
+    document.querySelector('.form-access').classList.add('_active');
   });
 });
 //# sourceMappingURL=main.js.map
