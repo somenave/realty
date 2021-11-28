@@ -421,4 +421,13 @@ function body_lock_add(delay) {
   }
 }
 "use strict";
+
+document.querySelectorAll('.form-submit').forEach(function (item) {
+  item.addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    item.closest('.popup').classList.remove('_active');
+    document.querySelector('.form-access').classList.add('_active');
+  });
+});
 //# sourceMappingURL=main.js.map

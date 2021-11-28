@@ -628,7 +628,7 @@
     <div class="popup__body order-popup__body">
       <div class="popup__close"></div>
       <div class="popup__form">
-        <form action="ordercall.php" id="form" class="popup__form-body" method="POST">
+        <form action="ordercall.php" id="form" class="popup__form-body form-submit" method="POST">
           <h2 class="popup__form-title">Заказ звонка</h2>
           <div class="popup__form-item">
             <label for="formName" class="popup__form-label">Имя:</label>
@@ -662,7 +662,7 @@
     <div class="popup__body order-popup__body">
       <div class="popup__close"></div>
       <div class="popup__form">
-        <form action="ordercall.php" id="form" class="popup__form-body" method="POST">
+        <form action="ordercall.php" id="form" class="popup__form-body form-submit" method="POST">
           <h2 class="popup__form-title">Оставить заявку</h2>
           <div class="popup__form-item">
             <label for="formName" class="popup__form-label">Имя:</label>
@@ -696,7 +696,7 @@
     <div class="popup__body order-popup__body">
       <div class="popup__close"></div>
       <div class="popup__form">
-        <form action="askquestion.php" id="form" class="popup__form-body" method="POST">
+        <form action="askquestion.php" id="form" class="popup__form-body form-submit" method="POST">
           <h2 class="popup__form-title">Задать вопрос</h2>
           <div class="popup__form-item">
             <label for="formName" class="popup__form-label">Имя:</label>
@@ -730,7 +730,7 @@
     <div class="popup__body order-popup__body">
       <div class="popup__close"></div>
       <div class="popup__form">
-        <form action="ordercalc.php" id="form" class="popup__form-body" method="POST">
+        <form action="ordercalc.php" id="form" class="popup__form-body form-submit" method="POST">
           <h2 class="popup__form-title">Расчитать ежемесячный платеж</h2>
           <div class="popup__form-item">
             <label for="formName" class="popup__form-label">Имя:</label>
@@ -764,7 +764,7 @@
     <div class="popup__body order-popup__body">
       <div class="popup__close"></div>
       <div class="popup__form">
-        <form action="getpresent.php" id="form" class="popup__form-body" method="POST">
+        <form action="getpresent.php" id="form" class="popup__form-body form-submit" method="POST">
           <h2 class="popup__form-title">Получите презентацию
             по выбранному объекту</h2>
           <div class="popup__form-item">
@@ -799,7 +799,7 @@
     <div class="popup__body order-popup__body">
       <div class="popup__close"></div>
       <div class="popup__form">
-        <form action="getonline.php" id="form" class="popup__form-body" method="POST">
+        <form action="getonline.php" id="form" class="popup__form-body form-submit" method="POST">
           <h2 class="popup__form-title">Закажите онлайн просмотр</h2>
           <div class="popup__form-item">
             <label for="formName" class="popup__form-label">Имя:</label>
@@ -829,7 +829,7 @@
     <div class="popup__body question-popup__body">
       <div class="popup__close question__close"></div>
       <div class="popup__form popup__form-question">
-        <form action="https://formphp.ru/getcatalog.php" method="POST">
+        <form action="https://formphp.ru/getcatalog.php" method="POST" class="form-submit">
           <div class="question-form__content">
             <div class="question" data-num="1">
               <h3 class="question__title">Вопрос 1</h3>
@@ -843,11 +843,13 @@
                       <label class="answers__label" for="qi0">Студия</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi1" value="Апартаменты 1–2 спальни" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi1" value="Апартаменты 1–2 спальни"
+                        class="answers__item">
                       <label class="answers__label" for="qi1">Апартаменты 1–2 спальни</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi2" value="Апартаменты 3–4 спальни" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi2" value="Апартаменты 3–4 спальни"
+                        class="answers__item">
                       <label class="answers__label" for="qi2">Апартаменты 3–4 спальни</label>
                     </div>
                     <div class="answers-item">
@@ -871,7 +873,8 @@
                       <label class="answers__label" for="qi7">Земельный участок</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi8" value="Инвестиционные проекты" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi8" value="Инвестиционные проекты"
+                        class="answers__item">
                       <label class="answers__label" for="qi8">Инвестиционные проекты</label>
                     </div>
                   </div>
@@ -886,15 +889,18 @@
                       <label class="answers__label" for="qi10">Отели, гостиницы</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi11" value="Магазины, торговые центры" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi11" value="Магазины, торговые центры"
+                        class="answers__item">
                       <label class="answers__label" for="qi11">Магазины, торговые центры</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi12" value="Офисы, бизнес-центры" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi12" value="Офисы, бизнес-центры"
+                        class="answers__item">
                       <label class="answers__label" for="qi12">Офисы, бизнес-центры</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi13" value="Производственные помещения" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi13" value="Производственные помещения"
+                        class="answers__item">
                       <label class="answers__label" for="qi13">Производственные помещения</label>
                     </div>
                     <div class="answers-item">
@@ -902,7 +908,8 @@
                       <label class="answers__label" for="qi14">Склады</label>
                     </div>
                     <div class="answers-item">
-                      <input type="checkbox" name="realtyType" id="qi16" value="Рестораны, кафе, бары" class="answers__item">
+                      <input type="checkbox" name="realtyType" id="qi16" value="Рестораны, кафе, бары"
+                        class="answers__item">
                       <label class="answers__label" for="qi16">Рестораны, кафе, бары</label>
                     </div>
                   </div>
@@ -1008,7 +1015,8 @@
                     <label class="answers__label" for="qi1-25">Ирландия</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="country" id="qi1-15" value="Страны Карибского бассейна" class="answers__item">
+                    <input type="checkbox" name="country" id="qi1-15" value="Страны Карибского бассейна"
+                      class="answers__item">
                     <label class="answers__label" for="qi1-15">Страны Карибского бассейна</label>
                   </div>
                 </div>
@@ -1059,23 +1067,28 @@
                 <div class="answers answers_fourth">
                   <input checked type="checkbox" hidden value="Никаких" name="services">
                   <div class="answers-item">
-                    <input type="checkbox" name="services" id="qi3-0" value="Подбор недвижимости в новостройках" class="answers__item">
+                    <input type="checkbox" name="services" id="qi3-0" value="Подбор недвижимости в новостройках"
+                      class="answers__item">
                     <label class="answers__label" for="qi3-0">Подбор недвижимости в новостройках</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="services" id="qi3-1" value="Подбор объектов на вторичном рынке" class="answers__item">
+                    <input type="checkbox" name="services" id="qi3-1" value="Подбор объектов на вторичном рынке"
+                      class="answers__item">
                     <label class="answers__label" for="qi3-1">Подбор объектов на вторичном рынке</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="services" id="qi3-2" value="Подбор коммерческих объектов" class="answers__item">
+                    <input type="checkbox" name="services" id="qi3-2" value="Подбор коммерческих объектов"
+                      class="answers__item">
                     <label class="answers__label" for="qi3-2">Подбор коммерческих объектов</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="services" id="qi3-3" value="Управление недвижимостью" class="answers__item">
+                    <input type="checkbox" name="services" id="qi3-3" value="Управление недвижимостью"
+                      class="answers__item">
                     <label class="answers__label" for="qi3-3">Управление недвижимостью</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="services" id="qi3-4" value="Помощь в организации бизнеса за рубежом" class="answers__item">
+                    <input type="checkbox" name="services" id="qi3-4" value="Помощь в организации бизнеса за рубежом"
+                      class="answers__item">
                     <label class="answers__label" for="qi3-4">Помощь в организации бизнеса за рубежом</label>
                   </div>
                   <div class="answers-item">
@@ -1083,7 +1096,8 @@
                     <label class="answers__label" for="qi3-5">Получение ВНЖ</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="services" id="qi3-6" value="Получение гражданства" class="answers__item">
+                    <input type="checkbox" name="services" id="qi3-6" value="Получение гражданства"
+                      class="answers__item">
                     <label class="answers__label" for="qi3-6">Получение гражданства</label>
                   </div>
                   <div class="answers-item">
@@ -1108,7 +1122,8 @@
               <div class="question__content">
                 <div class="answers answers_fifth">
                   <div class="answers-item">
-                    <input type="radio" name="duration" id="qi4-0" value="Как только откроют границы" class="answers__item">
+                    <input type="radio" name="duration" id="qi4-0" value="Как только откроют границы"
+                      class="answers__item">
                     <label class="answers__label" for="qi4-0">Как только откроют границы</label>
                   </div>
                   <div class="answers-item">
@@ -1124,7 +1139,8 @@
                     <label class="answers__label" for="qi4-3">12 месяцев</label>
                   </div>
                   <div class="answers-item">
-                    <input type="radio" name="duration" id="qi4-4" value="Сроки пока не определены" class="answers__item" cheked>
+                    <input type="radio" name="duration" id="qi4-4" value="Сроки пока не определены"
+                      class="answers__item" cheked>
                     <label class="answers__label" for="qi4-4">Сроки пока не определены</label>
                   </div>
                 </div>
@@ -1137,11 +1153,13 @@
               <div class="question__content">
                 <div class="answers answers_sixth">
                   <div class="answers-item">
-                    <input type="checkbox" name="goal" id="qi5-0" value="Для выгодных инвестиций и сдачи в аренду" class="answers__item" checked>
+                    <input type="checkbox" name="goal" id="qi5-0" value="Для выгодных инвестиций и сдачи в аренду"
+                      class="answers__item" checked>
                     <label class="answers__label" for="qi5-0">Для выгодных инвестиций и сдачи в аренду</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="goal" id="qi5-1" value="Для получения ВНЖ или гражданства" class="answers__item">
+                    <input type="checkbox" name="goal" id="qi5-1" value="Для получения ВНЖ или гражданства"
+                      class="answers__item">
                     <label class="answers__label" for="qi5-1">Для получения ВНЖ или гражданства</label>
                   </div>
                   <div class="answers-item">
@@ -1149,7 +1167,8 @@
                     <label class="answers__label" for="qi5-2">Для сезонного отдыха</label>
                   </div>
                   <div class="answers-item">
-                    <input type="checkbox" name="goal" id="qi5-3" value="В целях открытия бизнеса или филиала" class="answers__item">
+                    <input type="checkbox" name="goal" id="qi5-3" value="В целях открытия бизнеса или филиала"
+                      class="answers__item">
                     <label class="answers__label" for="qi5-3">В целях открытия бизнеса или филиала</label>
                   </div>
                 </div>
@@ -1179,7 +1198,8 @@
 
             <div class="question" data-num="8">
               <h3 class="question__title">Мы нашли
-                <span class="question__title-accent"><span class="random-num">18</span> объектов</span> по вашему запросу</h3>
+                <span class="question__title-accent"><span class="random-num">18</span> объектов</span> по вашему
+                запросу</h3>
               <div class="question__descr">Оставьте свои контактные данные и мы отправим вам предложения
                 <span>в течение 1 минуты</span></div>
               <div class="question__content">
@@ -1191,7 +1211,7 @@
                     <input type="tel" name="tel" required placeholder="Телефон">
                   </div>
                   <div class="answer__email answer__input">
-                    <input type="email" required placeholder="E-mail">
+                    <input type="email" required placeholder="E-mail" name="email">
                   </div>
                 </div>
 
@@ -1215,6 +1235,22 @@
     </div>
   </div>
 </div>
+
+
+<div id="formaccess" class="popup popup_formaccess form-access">
+  <div class="popup__content">
+    <div class="popup__body access-popup__body">
+      <div class="popup__close"></div>
+      <div class="popup__access">
+        <svg viewBox="0 0 67 67" id="ic_success" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M48.309 22.87a2.617 2.617 0 0 1 0 3.702L30.75 44.13a2.618 2.618 0 0 1-3.701 0L18.69 35.77a2.616 2.616 0 1 1 3.701-3.7l6.508 6.507L44.607 22.87a2.618 2.618 0 0 1 3.702 0zM67 33.5C67 52.017 52.015 67 33.5 67 14.983 67 0 52.015 0 33.5 0 14.983 14.985 0 33.5 0 52.017 0 67 14.985 67 33.5zm-5.234 0c0-15.624-12.644-28.266-28.266-28.266-15.624 0-28.266 12.644-28.266 28.266 0 15.624 12.644 28.266 28.266 28.266 15.624 0 28.266-12.644 28.266-28.266z" />
+          </svg>
+        <div class="popup__access_title">Спасибо!</div>
+        <div class="popup__access_descr">Наши специалисты уже начали обработку запроса.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
   </div>

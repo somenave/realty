@@ -492,6 +492,43 @@ h5 {
   }
 }
 
+.popup__access {
+  max-width: 625px;
+  padding: 62px 43px 65px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(30, 35, 66, 0.15);
+  border-radius: 15px;
+  margin: 100px auto 0;
+}
+@media (max-width: 768px) {
+  .popup__access {
+    max-width: 85%;
+    padding: 30px 20px;
+  }
+}
+.popup__access svg {
+  display: block;
+  width: 67px;
+  height: 67px;
+  margin: 0 auto 23px;
+  fill: #50b254;
+}
+.popup__access_title {
+  color: #0B1D33;
+  font-size: 34px;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+.popup__access_descr {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 137%;
+  max-width: 100%;
+  text-align: center;
+}
+
 /**
  * Swiper 7.3.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
