@@ -1535,13 +1535,13 @@ textarea.popup__form-input {
 }
 @media (max-width: 660px) {
   .burger-menu {
-    width: 30px;
-    height: 20px;
+    width: 40px;
+    height: 34px;
   }
 }
 .burger-menu .bar {
   transition: all 0.2s;
-  height: 2px;
+  height: 3px;
   width: 100%;
   display: block;
   background-color: #FFFFFF;
@@ -1557,7 +1557,7 @@ textarea.popup__form-input {
 }
 @media (max-width: 660px) {
   .burger-menu .bar:nth-of-type(2), .burger-menu .bar:nth-child(3) {
-    margin: 6px 0 0;
+    margin: 8px 0 0;
   }
 }
 .burger-menu--closed {
@@ -1566,20 +1566,20 @@ textarea.popup__form-input {
 .burger-menu--closed .bar {
   float: right;
 }
-.burger-menu--closed .bar:nth-of-type(2) {
+.burger-menu--closed .bar:nth-child(2) {
+  width: 80%;
+}
+.burger-menu--closed .bar:nth-of-type(3) {
   transition-property: margin, height, width;
   transition-delay: 0.1s, 0.1s, 0s;
+  width: 70%;
 }
 .burger-menu--opened {
   padding-top: 12px;
-}
-@media (max-width: 1024px) {
-  .burger-menu--opened {
-    padding-top: 0;
-  }
+  width: 30px;
 }
 .burger-menu--opened .bar {
-  width: 40px;
+  width: 30px;
 }
 @media (max-width: 1024px) {
   .burger-menu--opened .bar {
@@ -1588,13 +1588,14 @@ textarea.popup__form-input {
 }
 @media (max-width: 660px) {
   .burger-menu--opened .bar {
-    width: 20px;
+    width: 30px;
   }
 }
 .burger-menu--opened .bar:nth-of-type(1) {
   transform: rotate(45deg);
   transition-delay: 0.1s;
   height: 2px;
+  width: 100%;
 }
 .burger-menu--opened .bar:nth-of-type(2) {
   transform: rotate(-45deg);
@@ -1602,9 +1603,11 @@ textarea.popup__form-input {
   height: 2px;
   margin: 0;
   margin-top: -2px;
+  width: 100%;
 }
 .burger-menu--opened .bar:nth-child(3) {
   display: none;
+  width: 100%;
 }
 
 .header {
