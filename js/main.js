@@ -422,11 +422,69 @@ function body_lock_add(delay) {
 }
 "use strict";
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var inputs = document.querySelectorAll('input');
+
+var clearInputs = function clearInputs() {
+  inputs.forEach(function (item) {
+    item.value = '';
+  });
+};
+
+var postData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, data) {
+    var res;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return fetch(url, {
+              method: "POST",
+              body: data
+            });
+
+          case 2:
+            res = _context.sent;
+            _context.next = 5;
+            return res.text();
+
+          case 5:
+            return _context.abrupt("return", _context.sent);
+
+          case 6:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function postData(_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
+}();
+
 document.querySelectorAll('.form-submit').forEach(function (item) {
   item.addEventListener('submit', function (e) {
     e.preventDefault();
     item.closest('.popup').classList.remove('_active');
-    document.querySelector('.form-access').classList.add('_active');
+    var formData = new FormData(item); // document.querySelector('.form-access').classList.add('_active');
+
+    var api = 'https://formphp.ru/getcatalog.php';
+    postData(api, formData).then(function (res) {
+      console.log(res);
+      document.querySelector('.form-access').classList.add('_active');
+    })["catch"](function () {
+      document.querySelector('.form-access').classList.add('_active');
+      document.querySelector('.popup__access_title').textContent = 'Ошибка!';
+      document.querySelector('.popup__access_descr').textContent = 'Что-то пошло не так...';
+    })["finally"](function () {
+      clearInputs();
+    });
   });
 });
 //# sourceMappingURL=main.js.map
